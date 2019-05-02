@@ -7,8 +7,8 @@ import java.util.regex.Pattern;
 public class Converter {
 
     //turkish numbers as words
-	public static List<String> allowedStrings = Arrays.asList("bir", "iki", "üç", "dört", "beş", "altı", "yedi",
-			"sekiz", "dokuz", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan", "yüz",
+	public static List<String> allowedStrings = Arrays.asList("bir", "iki", "Ã¼Ã§", "dÃ¶rt", "beÅŸ", "altÄ±", "yedi",
+			"sekiz", "dokuz", "on", "yirmi", "otuz", "kÄ±rk", "elli", "altmÄ±ÅŸ", "yetmiÅŸ", "seksen", "doksan", "yÃ¼z",
 			"bin", "milyon", "milyar");
 
 	//add character to position and shift
@@ -120,7 +120,7 @@ public class Converter {
 				}
 				splittedParts = temp.clone();
 			}
-			if (splittedParts[0].equals("yüz")) {
+			if (splittedParts[0].equals("yÃ¼z")) {
 				String[] temp = new String[splittedParts.length + 1];
 				temp[0] = "bir";
 				for (int i = 0; i < splittedParts.length; i++) {
@@ -134,13 +134,13 @@ public class Converter {
 						result += 1;
 					} else if (str.equalsIgnoreCase("iki")) {
 						result += 2;
-					} else if (str.equalsIgnoreCase("üç")) {
+					} else if (str.equalsIgnoreCase("Ã¼Ã§")) {
 						result += 3;
-					} else if (str.equalsIgnoreCase("dört")) {
+					} else if (str.equalsIgnoreCase("dÃ¶rt")) {
 						result += 4;
-					} else if (str.equalsIgnoreCase("beş")) {
+					} else if (str.equalsIgnoreCase("beÅŸ")) {
 						result += 5;
-					} else if (str.equalsIgnoreCase("altı")) {
+					} else if (str.equalsIgnoreCase("altÄ±")) {
 						result += 6;
 					} else if (str.equalsIgnoreCase("yedi")) {
 						result += 7;
@@ -154,19 +154,19 @@ public class Converter {
 						result += 20;
 					} else if (str.equalsIgnoreCase("otuz")) {
 						result += 30;
-					} else if (str.equalsIgnoreCase("kırk")) {
+					} else if (str.equalsIgnoreCase("kÄ±rk")) {
 						result += 40;
 					} else if (str.equalsIgnoreCase("elli")) {
 						result += 50;
-					} else if (str.equalsIgnoreCase("altmış")) {
+					} else if (str.equalsIgnoreCase("altmÄ±ÅŸ")) {
 						result += 60;
-					} else if (str.equalsIgnoreCase("yetmiş")) {
+					} else if (str.equalsIgnoreCase("yetmiÅŸ")) {
 						result += 70;
 					} else if (str.equalsIgnoreCase("seksen")) {
 						result += 80;
 					} else if (str.equalsIgnoreCase("doksan")) {
 						result += 90;
-					} else if (str.equalsIgnoreCase("yüz")) {
+					} else if (str.equalsIgnoreCase("yÃ¼z")) {
 						if (result == 0) {
 							result += 100;
 						} else
@@ -200,19 +200,19 @@ public class Converter {
 
 	public static void main(String args[]) {
 
-		System.out.println("Yazıyla bir sayı girin, çıkış için q:");
+		System.out.println("YazÄ±yla bir sayÄ± girin, Ã§Ä±kÄ±ÅŸ iÃ§in q:");
 		Scanner scan = new Scanner(System.in);
 		String inputString = scan.nextLine();
 		while (!inputString.equals("q")) {
 			System.out.println(inputString);
-			String dummy = "yüz beşbindokuz";
 			System.out.println("Dummy text is: " + inputString);
 			String spaced = NormalizeText(inputString);
 			System.out.println("Spaced out text is: " + spaced);
 			Long numbers = TextToNumber(spaced);
 			System.out.println("Converted to numbers: " + numbers);
-			System.out.println("Yazıyla bir sayı girin:");
+			System.out.println("YazÄ±yla bir sayÄ± girin:");
 			inputString = scan.nextLine();
+			scan.close();
 		}
 	}
 }
