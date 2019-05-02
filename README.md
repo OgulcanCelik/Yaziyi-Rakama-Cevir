@@ -1,4 +1,4 @@
- - ### [Türkçe](#yazıyla-yazılmış-numaraları-rakamla-sayıya-çevir)
+ - ### [Türkçe](#yazıyla-yazılmış-numaraları-rakamlı-sayıya-çevir)
  - ### [English](#convert-numbers-written-as-text-to-numbers)
 # Yazıyla Yazılmış Numaraları Rakamlı Sayıya Çevir
 Bu mini Java kodu, yazıyla -string- girilmiş bir sayıyı rakama çevirmeye yarar. Örneğin:
