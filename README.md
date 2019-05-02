@@ -17,6 +17,8 @@ veya
 
 aynı sonucu verecektir:
 >895402
+## Kullanış
+Converter.java'nın içersinde deneme yapabileceğiniz bir main bulunmakta. İstediğiniz sayıyı yazı halinde -ister boşluklu ister boşluksuz- girip deneyebilirsiniz
 ## Sorunlar
 
  - Kod şu anda 1000'den büyük ve 1 milyardan küçük sayılar arasında çalışıyor.
@@ -39,7 +41,8 @@ or
 gives same output
 >895402
 
-
+## How to Use
+There is a main method in Converter.java. You can try the code by giving any number written as text.
 ## Problems
 
  - It only works for numbers between greater than 1000 and less than 1 billion.
